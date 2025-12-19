@@ -3,12 +3,78 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <title>Change Calculator</title>
   </head>
   <body>
     <!-- Write your markup here -->
 
-    <!-- Don't forget to add your <script> tag here -->
 
+      <table>
+        <thead>
+          <tr>
+          <th colspan="4" style="text-align: center;"><h1>CHANGE CALCULATOR</h1></th>
+          </tr>
+        <tr>
+          <th scope="column">Amount Due:</th>
+          <th scope="column"></th>
+          <th scope="column">Amount Received:</th> 
+        </tr>
+        </thead>
+        
+        <tbody>
+
+        <tr>
+          <td> <input id="amount-due" type="text" placeholder="Amount Due" /></td>
+          <td><button id="calculate-button" type="button">Calculate</button></td>
+          <td><input id="amount-tendered" type="text" placeholder="Amount Received" /></td>
+        </tr>
+      </tbody> 
+      </table>
+      
+      <br>
+      <br>
+
+      <table>
+        <thead>
+        <tr>
+        <th><element id="warning"><h1></h1></element><b></b></p></th>
+        </tr>
+        </thead>
+      </table>
+
+      <br>
+      <br>
+
+      <table>
+        <thead>
+        <tr>
+          <th colspan="4" style="text-align: center;"><p id="dollars"><b></b></p></th>
+        </tr>
+        <tr>
+          <th colspan="4" style="text-align: center;"><p><h2><b>Dollars</b></h2></p></th>
+        </tr>
+        </thead>
+        <tc>
+          <th><element id="quarters"><h2></h2></element></th>
+          <th><element id="dimes"><h2></h2></element></th>
+          <th><element id="nickels"><h2></h2></element></th>
+          <th><element id="pennies"><h2></h2></element></th>
+        </tc>
+        
+        
+        <tr>
+          <th><p><h2>Quarters</h2></p></th>
+          <th><p><h2>Dimes</h2></p></th>
+          <th><p><h2>Nickels</h2></p></th>
+          <th><p><h2>Pennies</h2></p></th>
+        </tr>
+    </table>
+    <!-- Don't forget to add your <script> tag here -->
+  <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
+
+
+
+
