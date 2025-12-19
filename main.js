@@ -64,18 +64,46 @@ function handleClickEvent() {
     const amountReceived = Number(document.getElementById('amount-tendered').value);
     const changeTotal = Math.round((amountReceived - amountDue) * 100); // convert to cents
 
+    /*
+    document.getElementById('oneHundredDollars',
+                            'fiftyDollars', 
+                            'twentyDollars', 
+                            'tenDollars', 
+                            'fiveDollars', 
+                            'oneDollars', 
+                            'quarters', 
+                            'dimes', 
+                            'nickels', 
+                            'pennies').textContent = '';
+    */
+
+    document.getElementById('oneHundredDollars').textContent = '';
+    document.getElementById('fiftyDollars').textContent = '';
+    document.getElementById('twentyDollars').textContent = '';
+    document.getElementById('tenDollars').textContent = '';
+    document.getElementById('fiveDollars').textContent = '';
+    document.getElementById('oneDollars').textContent = '';
+    document.getElementById('quarters').textContent = '';
+    document.getElementById('dimes').textContent = '';
+    document.getElementById('nickels').textContent = '';
+    document.getElementById('pennies').textContent = '';
+
     if (changeTotal < 0) {
         //alert('Please ask customer to provide additional money');
-        document.getElementById('warning').textContent = 'Please ask customer to provide additional money'
+        document.getElementById('change-due').textContent = 'Please ask customer to provide $' + (amountDue - amountReceived).toFixed(2);
+        return;
+    }
+        if (changeTotal === 0) {
+        //alert('EXACT CHANGE!');
+        document.getElementById('change-due').textContent = "EXACT CHANGE PROVIDED, LET'S CELEBRATE!!!!";
         return;
     }
 
-    document.getElementById('warning').textContent = ''
-
     const result = calculateChange(changeTotal);
 
-    document.getElementById('oneHundredDollars').textContent = result.oneHundredDollars + ' Hundreds';
-    document.getElementById('fiftyDollars').textContent = result.fiftyDollars + (result.fiftyDollars === 1 ? ' Fifty' : ' Fifties');
+    document.getElementById('change-due').textContent = 'Total Change Due: $' + ((amountReceived - amountDue).toFixed(2));
+    document.getElementById('oneHundredDollars').textContent = result.oneHundredDollars + (result.oneHundredDollars === 1 ? ' Hundred' : ' Hundreds');
+    document.getElementById('fiftyDollars').textContent = result.fiftyDollars + ' Fifty';
     document.getElementById('twentyDollars').textContent = result.twentyDollars + (result.twentyDollars === 1 ? ' Twenty' : ' Twenties');
     document.getElementById('tenDollars').textContent = result.tenDollars + (result.tenDollars === 1 ? ' Tenner' : ' Tens');
     document.getElementById('fiveDollars').textContent = result.fiveDollars + (result.fiveDollars === 1 ? ' Fiver' : ' Fives');
@@ -85,7 +113,6 @@ function handleClickEvent() {
     document.getElementById('nickels').textContent = result.nickels + (result.nickels === 1 ? ' Nickel' : ' Nickels');
     document.getElementById('pennies').textContent = result.pennies + (result.pennies === 1 ? ' Penny' : ' Pennies');
 }
-
 
 function handleEnterKeyPress(event) {
     // Check if the key pressed is the 'Enter' key

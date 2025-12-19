@@ -9,21 +9,17 @@
   <body>
     <!-- Write your markup here -->
 
-
+    <!-- Table format for symmetry-->
       <table>
-        <thead>
           <tr>
           <th colspan="4" style="text-align: center;"><h1>CHANGE CALCULATOR</h1></th>
           </tr>
         <tr>
-          <th scope="column">Due:</th>
+          <th scope="column">Amount Due:</th>
           <th scope="column"></th>
           <th scope="column">Received:</th> 
         </tr>
-        </thead>
-
         <tbody>
-
         <tr>
           <td> <input type="number" id="amount-due" type="text" placeholder="" /></td>
           <td><button id="calculate-button" type="button">Calculate</button></td>
@@ -31,49 +27,47 @@
         </tr>
       </tbody> 
       </table>
-
+    <!-- Separate table for warning output if requirements not met -->
       <table>
-        <thead>
         <tr>
-        <th><element id="warning"><h1></h1></element></th>
+          <th style="text-align: center;" id="change-due"></th>
         </tr>
-        </thead>
       </table>
-
+    <!-- Bottom table for breakout of currency denominations-->
       <table>
         <tr>
-          <th colspan="4" style="text-align: center;"><p id="oneHundredDollars"></th>
-          <th colspan="4" style="text-align: center;"><p id="fiftyDollars"></th>
-          <th colspan="4" style="text-align: center;"><p id="twentyDollars"></th>
+          <th style="text-align: center;"><p id="oneHundredDollars"></th>
+          <th style="text-align: center;"><p id="fiftyDollars"></th>
+          <th style="text-align: center;"><p id="twentyDollars"></th>
         </tr>
         <tr>
-          <th colspan="4" style="text-align: center;"><h2><img src="/img/oneHundredDollarBill.jpg" width="200" height=auto></h2></th>
-          <th colspan="4" style="text-align: center;"><h2><img src="/img/fiftyDollarBill.jpg" width="200" height=auto></h2></th>          
-          <th colspan="4" style="text-align: center;"><h2><img src="/img/twentyDollarBill.jpg" width="200" height=auto></h2></th>
+          <th style="text-align: center;"><img src="/img/oneHundredDollarBill.jpg" width="200" height=auto></th>
+          <th style="text-align: center;"><img src="/img/fiftyDollarBill.jpg" width="200" height=auto></th>          
+          <th style="text-align: center;"><img src="/img/twentyDollarBill.jpg" width="200" height=auto></th>
         </tr>
         <tr>
-          <th colspan="4" style="text-align: center;"><p id="tenDollars"></th>
-          <th colspan="4" style="text-align: center;"><p id="fiveDollars"></th>
-          <th colspan="4" style="text-align: center;"><p id="oneDollars"></th>
+          <th style="text-align: center;"><p id="tenDollars"></th>
+          <th style="text-align: center;"><p id="fiveDollars"></th>
+          <th style="text-align: center;"><p id="oneDollars"></th>
         </tr>
         <tr>
-          <th colspan="4" style="text-align: center;"><h2><img src="/img/tenDollarBill.jpg" width="200" height=auto></h2></th>          
-          <th colspan="4" style="text-align: center;"><h2><img src="/img/fiveDollarBill.jpg" width="200" height=auto></h2></th>
-          <th colspan="4" style="text-align: center;"><h2><img src="/img/oneDollarBill.jpg" width="200" height=auto></h2></th>
+          <th style="text-align: center;"><img src="/img/tenDollarBill.jpg" width="200" height=auto></th>          
+          <th style="text-align: center;"><img src="/img/fiveDollarBill.jpg" width="200" height=auto></th>
+          <th style="text-align: center;"><img src="/img/oneDollarBill.jpg" width="200" height=auto></th>
         </tr>
       </table>
       <table>
         <tr>
-          <th><element id="quarters"><h2></h2></element></th>
-          <th><element id="dimes"><h2></h2></element></th>
-          <th><element id="nickels"><h2></h2></element></th>
-          <th><element id="pennies"><h2></h2></element></th>
+          <th><element id="quarters"></element></th>
+          <th><element id="dimes"></element></th>
+          <th><element id="nickels"></element></th>
+          <th><element id="pennies"></element></th>
         </tr>
         <tr>
-          <th><h2><img src="/img/quarter.png" width="60" height="60"></h2></th>
-          <th><h2><img src="/img/dime.png" width="60" height="60"></h2></th>
-          <th><h2><img src="/img/nickel.png" width="60" height="60"></h2></th>
-          <th><h2><img src="/img/penny.png" width="60" height="60"></h2></th>
+          <th><img src="/img/quarter.png" width="60" height="60"></th>
+          <th><img src="/img/dime.png" width="60" height="60"></th>
+          <th><img src="/img/nickel.png" width="60" height="60"></th>
+          <th><img src="/img/penny.png" width="60" height="60"></th>
         </tr>
     </table>
     <!-- Don't forget to add your <script> tag here -->
